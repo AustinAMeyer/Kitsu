@@ -15,6 +15,7 @@
 		26B4071F22F91F3B00F91B9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B4071E22F91F3B00F91B9C /* main.m */; };
 		26B4072922F91F3B00F91B9C /* KitsuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B4072822F91F3B00F91B9C /* KitsuTests.m */; };
 		26B4073422F91F3B00F91B9C /* KitsuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B4073322F91F3B00F91B9C /* KitsuUITests.m */; };
+		26F51D362300A78500F2AB87 /* TopAnimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F51D352300A78500F2AB87 /* TopAnimeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		26B4072F22F91F3B00F91B9C /* KitsuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KitsuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B4073322F91F3B00F91B9C /* KitsuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KitsuUITests.m; sourceTree = "<group>"; };
 		26B4073522F91F3B00F91B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26F51D342300A78500F2AB87 /* TopAnimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopAnimeViewController.h; sourceTree = "<group>"; };
+		26F51D352300A78500F2AB87 /* TopAnimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopAnimeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				26B4071022F91F3A00F91B9C /* AppDelegate.m */,
 				26B4071222F91F3A00F91B9C /* ViewController.h */,
 				26B4071322F91F3A00F91B9C /* ViewController.m */,
+				26F51D342300A78500F2AB87 /* TopAnimeViewController.h */,
+				26F51D352300A78500F2AB87 /* TopAnimeViewController.m */,
 				26B4071522F91F3A00F91B9C /* Main.storyboard */,
 				26B4071822F91F3B00F91B9C /* Assets.xcassets */,
 				26B4071A22F91F3B00F91B9C /* LaunchScreen.storyboard */,
@@ -265,6 +270,7 @@
 				26B4071422F91F3A00F91B9C /* ViewController.m in Sources */,
 				26B4071F22F91F3B00F91B9C /* main.m in Sources */,
 				26B4071122F91F3A00F91B9C /* AppDelegate.m in Sources */,
+				26F51D362300A78500F2AB87 /* TopAnimeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,19 +15,24 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     NSError *error;
-    NSString *kitsuUrl = [NSString stringWithFormat: @"https://kitsu.io/api/edge/anime?page[limit]=20&page[offset]=0"];
-    NSData *kitsuData = [NSData dataWithContentsOfURL: [NSURL URLWithString:kitsuUrl]];
-    NSDictionary *kitsuJson = [NSJSONSerialization JSONObjectWithData:kitsuData options:kNilOptions error:&error];
-    //NSLog(@"json: %@", kitsuJson);
+   // _kitsuUrl = [NSString stringWithFormat: @"https://kitsu.io/api/edge/anime?sort=popularityRank"];
+    NSData *kitsuData = [NSData dataWithContentsOfURL: [NSURL URLWithString:_kitsuUrl]];
+    _kitsuJson = [NSJSONSerialization JSONObjectWithData:kitsuData options:kNilOptions error:&error];
+   // NSLog(@"json: %@", _kitsuJson);
     
-    self.canonicalTitle = [kitsuJson valueForKeyPath:@"data.attributes.canonicalTitle"];
-    self.posterImage = [kitsuJson valueForKeyPath:@"data.attributes.posterImage.tiny"];
+   //NSUInteger keyCount = [_kitsuJson count];
+    
+    self.canonicalTitle = [_kitsuJson valueForKeyPath:@"data.attributes.canonicalTitle"];
+    self.posterImage = [_kitsuJson valueForKeyPath:@"data.attributes.posterImage.tiny"];
     
     //NSLog(@"The content of arry is%@",self.canonicalTitle);
+    
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -42,7 +47,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    NSUInteger keyCount = [[_kitsuJson objectForKey: @"data"] count];
+   // NSLog(@"%lu",keyCount);
+    return keyCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

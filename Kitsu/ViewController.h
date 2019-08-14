@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
+@property (nonatomic, strong) NSDictionary *kitsuJson;
+@property (nonatomic, strong) NSString *kitsuUrl;
 @end
